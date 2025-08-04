@@ -111,22 +111,54 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
   .navbar {
     flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .navbar .nav-items a {
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .welcome {
+    padding-left: 0;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .typewriter {
+    padding-left: 0;
+    font-size: 13px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  @keyframes typing {
+  from {
+    width: -10%;
+  }
+  to {
+    width: 100%;
+  } /* Adjust this based on your text length */
 }
+}
+
+
 
 
