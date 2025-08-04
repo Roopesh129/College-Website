@@ -1,32 +1,55 @@
-*{
-    background-color: sRGB(255, 0, 242);
-    background-color: ;
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  
+  
 }
 .navbar {
-  background: black;
   color: white;
   font: 500;
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+ 
 }
 
 .nav-items {
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   color: white;
-  background-color: black;
   display: flex;
-  padding: 10px;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
   background: linear-gradient(115deg, #3c8ce7, #00eaff);
-  padding-left: 590px;
+  padding: auto 20px;
   border: none 10px solid;
   border-radius: 5px;
-  margin: 0;
+  margin: 10px;
+  font: bolder;
 }
 .navbar .nav-items a {
   color: white;
   text-decoration: none;
+  padding: 25px;
+  font: bold;
+}
+.navbar .nav-items :hover {
+  color: white;
+  
+  transition: all 0.1s ease-in-out;
+  font-size: larger;
 }
 
 .welcome {
@@ -34,31 +57,36 @@
   font-family: "Montserrat", sans-serif;
   color: black;
   margin-top: 10px;
-  font-size: 50px;
+  font-size: 35px;
   transition: all 1s ease-in;
   padding-left: 40%;
   align-items: center;
-  
+  justify-content: end;
+  animation: fadeIn 1s ease-in;
 }
 
 .typewriter {
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-family: monospace;
+  font-size: 30px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
+  border-right: 1px solid black; /* small cursor */
   width: 0;
-  animation: typing 4s steps(30, end) forwards, blink 0.7s step-end infinite;
-  padding-left: 390px;
-  color: #3c8ce7;
+  animation: typing 3s steps(35, end) forwards, blink 0.3s step-end infinite;
+  padding-right: 0.1em; /* Small space after the cursor */
+  padding-left: 40%;
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  color: #00bfff;
 }
 
 @keyframes typing {
   from {
-    width: 0;
+    width: 0%;
   }
   to {
-    width: 45ch;
+    width: 100%;
   } /* Adjust this based on your text length */
 }
 
@@ -72,3 +100,33 @@
     border-color: transparent;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+
